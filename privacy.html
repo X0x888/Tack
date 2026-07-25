@@ -25,10 +25,10 @@
     <main>
         <div class="legal-header">
             <h1>Privacy Policy</h1>
-            <p class="effective-date">Effective Date: July 22, 2026</p>
+            <p class="effective-date">Effective Date: July 25, 2026</p>
         </div>
 
-        <p class="legal-intro">Tack is a local-first macOS notes app. We do not operate a note server, require an account, run advertising or analytics, or track you across apps or websites.</p>
+        <p class="legal-intro">Tack is a local-first macOS notes app. We do not operate a cloud service that receives your notes, require an account, run advertising or analytics, or track you across apps or websites.</p>
 
         <h2>1. Data We Collect</h2>
         <p>We do not collect data from the Tack app. In particular, Tack does not automatically send us your notes, images, identifiers, usage activity, location, contacts, or diagnostics.</p>
@@ -49,22 +49,26 @@
         <p>Memory suggestions, semantic connections, OCR, Spotlight indexing, and crash-diagnostic preparation run on-device.</p>
 
         <h2>5. Optional Local MCP Helper</h2>
-        <p>The Connections feature is off by default. If you enable it, Tack registers a sandboxed background helper that listens only on your Mac's loopback interface. Compatible apps on the same Mac can then read or change Tack notes through the Model Context Protocol. The helper is not reachable from another device and does not send note content to us. Disable it in Tack's Settings or macOS Login Items when you do not want local clients to connect.</p>
+        <p>The Connections feature is off by default. If you enable it, Tack registers a sandboxed background helper that listens only on your Mac's loopback interface. The helper requires an automatically generated local bearer secret; Tack stores that secret with owner-only file permissions and includes it in connection configurations you choose to create. Requests without the correct secret are rejected.</p>
+        <p>Compatible apps you configure can then read or change Tack notes through the Model Context Protocol. The helper is not reachable from another device and does not send note content to us. A connected app may process requested note content locally or through its own online service, according to that app's settings and privacy terms. Disable the helper in Tack's Settings or macOS Login Items, and remove Tack from a client's configuration, when you no longer want that client to connect.</p>
 
         <h2>6. Exports, Feedback, and Support</h2>
         <p>You can export notes and backups to a location you choose. Tack does not upload those files. If you deliberately email us or attach an exported diagnostic bundle, we receive the information you choose to send and use it only to respond, investigate the issue, and maintain the app. Do not include private note content you do not want to share.</p>
+        <p>We retain support messages and attachments only as long as reasonably needed to answer your request, investigate recurring or security-related issues, and meet legal obligations. You may ask us to delete a support conversation by using the contact address below; we will honor the request unless retention is required for legal, fraud-prevention, or security purposes.</p>
 
         <h2 id="choices">7. Your Choices and Deletion</h2>
         <ul>
             <li>Keep iCloud Sync, Calendar mirroring, background connection scanning, and the MCP helper disabled.</li>
             <li>Turn enabled features off in Tack Settings and revoke Calendar access in System Settings.</li>
+            <li>Disconnect configured MCP clients and disable the local helper in Tack or macOS Login Items.</li>
             <li>Delete individual content, empty Tack's Trash, or use the in-app reset controls.</li>
             <li>Delete private iCloud data through your Apple account and device controls.</li>
+            <li>Request deletion of information you deliberately sent to support.</li>
         </ul>
         <p>Removing an app does not always remove every macOS App Group container automatically. Contact support if you need help locating and deleting residual local Tack data.</p>
 
         <h2>8. Sharing, Sale, and Tracking</h2>
-        <p>We do not sell or share personal information, display targeted advertising, or combine Tack activity with third-party data for tracking.</p>
+        <p>We do not sell personal information, share it for cross-context behavioral advertising, display targeted advertising, or combine Tack activity with third-party data for tracking. GitHub and our email provider process limited information only to host this site or deliver support messages under their own terms.</p>
 
         <h2>9. Children</h2>
         <p>Tack is a general-audience productivity app and is not directed to children. Because we do not collect app data or operate accounts, we do not knowingly collect personal information from children through the app.</p>
@@ -76,7 +80,7 @@
         <p>We may update this policy when Tack's behavior or legal requirements change. The effective date above identifies the current version.</p>
 
         <h2>12. Contact</h2>
-        <p>Questions or privacy requests: <a href="mailto:hi@cryptoanalyzer.app">hi@cryptoanalyzer.app</a>.</p>
+        <p>Questions, access requests, or deletion requests: <a href="mailto:hi@cryptoanalyzer.app?subject=Tack%20Privacy%20Request">hi@cryptoanalyzer.app</a>.</p>
 
         <a href="#top" class="back-to-top">Back to top</a>
     </main>
